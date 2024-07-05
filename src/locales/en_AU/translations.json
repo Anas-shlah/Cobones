@@ -1,0 +1,13 @@
+{
+  "general": {
+    "buttons": {
+      "next": "Next",
+      "ok": "OK",
+      "skip": "Skip",
+      "cancel": "Cancel",
+      "save": "Save",
+      "create": "Create"
+    }
+  },
+  "screens": {}
+}
