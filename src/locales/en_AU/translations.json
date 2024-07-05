@@ -7,6 +7,11 @@
       "cancel": "Cancel",
       "save": "Save",
       "create": "Create"
+    },
+    "locations": {
+      "dubai": "Dubai",
+      "abu-dhabi": "Abu Dhabi",
+      "riyadh": "Riyadh"
     }
   },
   "screens": {}
