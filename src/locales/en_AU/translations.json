@@ -14,5 +14,9 @@
       "riyadh": "Riyadh"
     }
   },
-  "screens": {}
+  "screens": {
+    "Home": {
+      "search-cobone": "Search cobone..."
+    }
+  }
 }

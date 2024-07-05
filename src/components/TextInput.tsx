@@ -11,7 +11,7 @@ import React from 'react';
 import {Text} from './Text';
 
 const container = {
-  backgroundColor: 'white',
+  backgroundColor: Colors.placeholder,
   height: Layout.button,
   flexDirection: 'row',
   alignItems: 'center',
@@ -36,6 +36,7 @@ export type TextInputProps = TextInputPropsBase & {
   isDateInput?: boolean;
   unit?: string;
   disabled?: boolean;
+  icon?: React.ReactNode;
 };
 
 function TextInput(props: TextInputProps) {
@@ -44,22 +45,20 @@ function TextInput(props: TextInputProps) {
     style,
     labelIcon,
     label,
-    onChangeText,
     wrapperStyle,
     disabled,
     placeholder,
     unit,
-    isPassword,
+    icon,
     ...otherTextProps
   } = props;
   const textInputStyle = [
     style,
     {
-      fontSize: 16,
+      fontSize: 18,
       paddingHorizontal: Layout.spacing.sm,
       flex: 1,
     },
-    !style ? {fontWeight: '300'} : null,
   ];
 
   const hasLabel = typeof label === 'string';
@@ -84,6 +83,7 @@ function TextInput(props: TextInputProps) {
           style={textInputStyle}
           editable={!disabled}
           placeholder={placeholder ?? label}
+          placeholderTextColor={Colors.textPlaceholder}
           {...otherTextProps}
         />
         {unit && (
@@ -93,6 +93,7 @@ function TextInput(props: TextInputProps) {
             </Text>
           </View>
         )}
+        {icon && <View>{icon}</View>}
       </View>
     </View>
   );
@@ -101,7 +102,5 @@ TextInput.defaultProps = {
   containerStyle: undefined,
   labelIcon: undefined,
   label: undefined,
-  error: undefined,
-  mask: undefined,
 };
 export {TextInput};

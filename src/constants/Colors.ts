@@ -6,7 +6,8 @@ export default {
   text: '#000',
   textSecondary: '#696d7c',
   whiteText: '#FFF',
-  textPlaceholder: '#ddd',
+  placeholder: '#f0f4f8',
+  textPlaceholder: '#808080',
   iconDisabled: '#535353',
   white: '#FFFFFF',
 };
