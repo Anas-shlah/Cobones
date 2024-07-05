@@ -1,10 +1,11 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
+import {Text} from '../components/Text';
 
 const Home = () => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text preset="description">New In</Text>
     </View>
   );
 };
