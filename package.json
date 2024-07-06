@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@idiosync/horizontal-flatlist": "^1.0.18",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.10.0",
     "@types/react-native-snap-carousel": "^3.8.11",

@@ -16,7 +16,8 @@
   },
   "screens": {
     "Home": {
-      "search-cobone": "Search cobone..."
+      "search-cobone": "Search cobone...",
+      "unmissable-offers": "Unmissable Offers"
     }
   }
 }

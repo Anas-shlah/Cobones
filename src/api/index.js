@@ -33,11 +33,27 @@ export default {
   //   });
   // },
 
-  getUserJobRecommendations: async () => {
-    // return await axios.get(`${baseUrl}jobs/user/job-recommendations`, {
-    //   headers: {
-    //     Authorization: `Bearer ${token}`,
-    //   },
-    // });
-  },
+  getFirstItemHome: async () => ([
+    {
+      title: 'FLASH SALE! Wild Wadi Waterpark Ticket',
+      body: 'Ut tincidunt tincidunt erat. Sed cursus turpis vitae tortor. Quisque malesuada placerat nisl. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
+      imgUrl:
+        'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65',
+      price: 209,
+    },
+    {
+      title: 'In turpis',
+      body: 'Aenean ut eros et nisl sagittis vestibulum. Donec posuere vulputate arcu. Proin faucibus arcu quis ante. Curabitur at lacus ac velit ornare lobortis. ',
+      imgUrl:
+        'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65',
+      price: 209,
+    },
+    {
+      title: 'Lorem Ipsum',
+      body: 'Phasellus ullamcorper ipsum rutrum nunc. Nullam quis ante. Etiam ultricies nisi vel augue. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc.',
+      imgUrl:
+        'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65',
+      price: 209,
+    },
+  ]),
 };
