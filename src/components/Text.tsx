@@ -76,9 +76,7 @@ function Text(props: TextProps) {
     preset !== 'header' && 16,
   ] as TextStyle;
 
-  return (
-    <RNText {...otherTextProps} allowFontScaling={false} style={textStyle} />
-  );
+  return <RNText {...otherTextProps} style={textStyle} />;
 }
 Text.defaultProps = {
   preset: 'primary',

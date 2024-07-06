@@ -10,4 +10,5 @@ export default {
   textPlaceholder: '#808080',
   iconDisabled: '#535353',
   white: '#FFFFFF',
+  unActivePrimary: '#FEEDC7',
 };
