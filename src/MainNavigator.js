@@ -3,6 +3,8 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Home from './screens/Home';
 import HomeHeader from './components/HomeHeader';
+import ProductDetails from './screens/ProductDetails';
+import DetailsHeader from './components/DetailsHeader';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +18,14 @@ const MainNavigator = () => {
           options={{
             headerShown: true,
             header: () => <HomeHeader />,
+          }}
+        />
+        <Stack.Screen
+          name="ProductDetails"
+          component={ProductDetails}
+          options={{
+            headerShown: true,
+            header: () => <DetailsHeader />,
           }}
         />
       </Stack.Navigator>

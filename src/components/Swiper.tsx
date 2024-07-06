@@ -1,4 +1,10 @@
-import {Image, StyleSheet, View, ViewStyle} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
 import React from 'react';
 import SwiperFlatList, {
   SwiperFlatListProps,
@@ -6,6 +12,7 @@ import SwiperFlatList, {
 import Layout from '../constants/Layout';
 import Colors from '../constants/Colors';
 import {Text} from './Text';
+import {useNavigation} from '@react-navigation/native';
 
 const typesSwiper = {
   a: [
@@ -57,9 +64,19 @@ export type CardItemProps = {
 };
 
 const CardItem = (props: CardItemProps) => {
-  const {containerStyle, data, typeSwiper = 'a', ...otherCardItemProps} = props;
+  const {
+    containerStyle,
+    onPress,
+    data,
+    typeSwiper = 'a',
+    ...otherCardItemProps
+  } = props;
+
   return (
-    <View style={[containerStyle, typesSwiper[typeSwiper]]}>
+    <TouchableOpacity
+      style={[containerStyle, typesSwiper[typeSwiper]]}
+      onPress={onPress}
+    >
       <View style={typeSwiper === 'b' && styles.containerImg}>
         <Image
           source={{
@@ -80,7 +97,7 @@ const CardItem = (props: CardItemProps) => {
           </Text>
         )}
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -92,6 +109,12 @@ const Swiper = (props: SwiperProps) => {
     typeSwiper = 'a',
     ...otherSwiperProps
   } = props;
+  const navigation = useNavigation();
+
+  const onPressProduct = data => {
+    navigation.navigate('ProductDetails', {data});
+  };
+
   return (
     <View>
       {label && (
@@ -108,6 +131,9 @@ const Swiper = (props: SwiperProps) => {
             data={item}
             typeSwiper={typeSwiper}
             otherCardItemProps={otherSwiperProps}
+            onPress={() => {
+              onPressProduct(item);
+            }}
           />
         )}
         paginationStyleItem={{width: 30, height: 5}}
