@@ -1,10 +1,11 @@
-import {Linking, Platform, ScrollView, StyleSheet, View} from 'react-native';
+import {Platform, ScrollView, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {Button} from '../../components/Button';
 import {Swiper} from '../../components/Swiper';
 import {Text} from '../../components/Text';
 import Colors from '../../constants/Colors';
 import OptionSection from './OptionSection';
+import WebView from 'react-native-webview';
+import Layout from '../../constants/Layout';
 
 const ProductDetails = ({route, navigation}) => {
   const {data} = route.params;
@@ -17,10 +18,7 @@ const ProductDetails = ({route, navigation}) => {
 
   return (
     <View>
-      <ScrollView
-        style={styles.body}
-        contentContainerStyle={{paddingBottom: 30}}
-      >
+      <ScrollView contentContainerStyle={{paddingBottom: 30}}>
         <View>
           <Swiper data={data.images} typeSwiper={'c'} />
         </View>
@@ -29,6 +27,11 @@ const ProductDetails = ({route, navigation}) => {
           <Text preset="secondary">{data.body}</Text>
         </View>
         {data?.options?.length && <OptionSection data={data.options} />}
+        <WebView
+          source={{uri: data.video}}
+          style={styles.videoContainer}
+          contentMode="desktop"
+        />
       </ScrollView>
     </View>
   );
@@ -37,12 +40,14 @@ const ProductDetails = ({route, navigation}) => {
 export default ProductDetails;
 
 const styles = StyleSheet.create({
-  body: {
-    padding: 10,
-  },
   containerTitles: {
     padding: 10,
     backgroundColor: Colors.white,
     marginBottom: 10,
+  },
+  videoContainer: {
+    height: Layout.window.height / 3,
+    width: Layout.window.width,
+    marginVertical: Layout.spacing.lg,
   },
 });

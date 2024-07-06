@@ -61,10 +61,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    backgroundColor: '#C0C0C0',
+    backgroundColor: '#E5E1E1',
     borderRadius: 5,
     width: 20,
-    height: 20,
+    height: 22,
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 15,
@@ -74,6 +74,6 @@ const styles = StyleSheet.create({
   textButton: {
     color: '#000',
     fontSize: 15,
-    fontWeight: '800',
+    fontWeight: '600',
   },
 });

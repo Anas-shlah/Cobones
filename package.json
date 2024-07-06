@@ -20,6 +20,7 @@
     "react-native-screens": "^3.32.0",
     "react-native-svg": "^15.3.0",
     "react-native-swiper-flatlist": "^3.2.4",
+    "react-native-webview": "^13.10.4",
     "yarn": "^1.22.22"
   },
   "devDependencies": {
