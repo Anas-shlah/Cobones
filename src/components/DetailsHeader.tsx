@@ -6,11 +6,20 @@ import CartIcon from '../assets/svg/cart';
 import LeftArrowIcon from '../assets/svg/leftArrow';
 import LoveIcon from '../assets/svg/love';
 import ShareIcon from '../assets/svg/share';
+import {useNavigation} from '@react-navigation/native';
 
 const DetailsHeader = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Button preset="primary" title={''} style={styles.backButton}>
+      <Button
+        preset="primary"
+        title={''}
+        onPress={() => {
+          navigation.goBack();
+        }}
+        style={styles.backButton}
+      >
         <LeftArrowIcon />
       </Button>
       <View style={styles.footer}>

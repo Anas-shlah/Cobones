@@ -26,6 +26,12 @@ const typesSwiper = {
       width: Layout.window.width / 1.2,
     },
   ] as ViewStyle,
+  c: [
+    {
+      width: Layout.window.width,
+      height: Layout.window.width / 1.7,
+    },
+  ] as ViewStyle,
 };
 
 const typesImageSwiper = {
@@ -41,6 +47,12 @@ const typesImageSwiper = {
       width: Layout.window.width / 1.3,
       height: Layout.window.width / 2.5,
       borderRadius: Layout.window.width / 20,
+    },
+  ] as ViewStyle,
+  c: [
+    {
+      width: Layout.window.width,
+      height: Layout.window.width / 2,
     },
   ] as ViewStyle,
 };
@@ -80,18 +92,18 @@ const CardItem = (props: CardItemProps) => {
       <View style={typeSwiper === 'b' && styles.containerImg}>
         <Image
           source={{
-            uri: data.imgUrl,
+            uri: data?.imgUrl || data,
           }}
           defaultSource={require('../assets/images/logoApp.webp')}
           resizeMode="stretch"
           style={typesImageSwiper[typeSwiper]}
         />
-        {typeSwiper !== 'a' && (
+        {typeSwiper === 'b' && (
           <Text preset="primary" style={styles.title}>
             {data?.title && data?.title}
           </Text>
         )}
-        {typeSwiper !== 'a' && (
+        {typeSwiper === 'b' && (
           <Text preset="header" style={styles.price}>
             AED {data?.price && data?.price}
           </Text>
@@ -123,8 +135,8 @@ const Swiper = (props: SwiperProps) => {
         </Text>
       )}
       <SwiperFlatList
-        showPagination={typeSwiper === 'a'}
-        pagingEnabled={typeSwiper === 'a'}
+        showPagination={typeSwiper !== 'b'}
+        pagingEnabled={typeSwiper !== 'b'}
         data={otherSwiperProps.data}
         renderItem={({item}) => (
           <CardItem
