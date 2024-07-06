@@ -7,7 +7,17 @@
       "cancel": "Cancel",
       "save": "Save",
       "create": "Create"
+    },
+    "locations": {
+      "dubai": "Dubai",
+      "abu-dhabi": "Abu Dhabi",
+      "riyadh": "Riyadh"
     }
   },
-  "screens": {}
+  "screens": {
+    "Home": {
+      "search-cobone": "Search cobone...",
+      "unmissable-offers": "Unmissable Offers"
+    }
+  }
 }
