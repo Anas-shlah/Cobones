@@ -5,11 +5,11 @@ import {Text} from './Text';
 import {translation} from '../locales';
 import Counter from './Counter';
 
-export type OptionSection = {
+export type OptionSectionProps = {
   data: [text: string, price: string | number];
 };
 
-const OptionSection = (props: OptionSection) => {
+const OptionSection = (props: OptionSectionProps) => {
   const {data} = props;
 
   return (

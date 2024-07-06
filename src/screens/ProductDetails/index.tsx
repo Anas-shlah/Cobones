@@ -3,18 +3,14 @@ import React from 'react';
 import {Swiper} from '../../components/Swiper';
 import {Text} from '../../components/Text';
 import Colors from '../../constants/Colors';
-import OptionSection from './OptionSection';
+import OptionSection from '../../components/OptionSection';
 import WebView from 'react-native-webview';
 import Layout from '../../constants/Layout';
+import DirectionsButton from '../../components/DirectionsButton';
 
 const ProductDetails = ({route, navigation}) => {
   const {data} = route.params;
   console.log(data);
-  const fullAddress = '25.1398260, 55.1896910';
-  const url = Platform.select({
-    ios: `maps:0,0?q=${fullAddress}`,
-    android: `geo:0,0?q=${fullAddress}`,
-  });
 
   return (
     <View>
@@ -32,6 +28,7 @@ const ProductDetails = ({route, navigation}) => {
           style={styles.videoContainer}
           contentMode="desktop"
         />
+        <DirectionsButton data={data.directions} />
       </ScrollView>
     </View>
   );
