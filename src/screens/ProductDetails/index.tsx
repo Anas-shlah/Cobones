@@ -28,7 +28,7 @@ const ProductDetails = ({route, navigation}) => {
       handlePress();
       return;
     }
-    navigation.navigate('AddToCartScreen');
+    navigation.navigate('AddToCartScreen', data);
   };
 
   return (
