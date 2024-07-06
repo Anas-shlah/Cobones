@@ -59,5 +59,5 @@ const styles = StyleSheet.create({
   icon: {
     padding: 10,
   },
-  backButton: {borderRadius: 50, height: 30, width: 30, marginHorizontal: 15},
+  backButton: {borderRadius: 50, height: 32, width: 30, marginHorizontal: 15},
 });
