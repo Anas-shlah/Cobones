@@ -7,10 +7,11 @@ import Counter from './Counter';
 
 export type OptionSectionProps = {
   data: [text: string, price: string | number];
+  setCounter: () => void;
 };
 
 const OptionSection = (props: OptionSectionProps) => {
-  const {data} = props;
+  const {data, setCounter} = props;
 
   return (
     <View style={styles.container}>
@@ -26,7 +27,7 @@ const OptionSection = (props: OptionSectionProps) => {
             </Text>
             <View style={styles.footer}>
               <Text preset="primary">AED {value.price}</Text>
-              <Counter />
+              <Counter onValueChange={v => setCounter(v)} />
             </View>
             {data.length > 1 && <View style={styles.line} />}
           </View>
