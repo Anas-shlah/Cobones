@@ -1,9 +1,9 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import Colors from '../../constants/Colors';
-import {Text} from '../../components/Text';
-import {translation} from '../../locales';
-import Counter from '../../components/Counter';
+import Colors from '../constants/Colors';
+import {Text} from './Text';
+import {translation} from '../locales';
+import Counter from './Counter';
 
 export type OptionSection = {
   data: [text: string, price: string | number];
