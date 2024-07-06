@@ -5,6 +5,8 @@ import Home from './screens/Home';
 import HomeHeader from './components/HomeHeader';
 import ProductDetails from './screens/ProductDetails';
 import DetailsHeader from './components/DetailsHeader';
+import AddToCartScreen from './screens/AddToCartScreen';
+import CartHeader from './components/CartHeader';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +28,14 @@ const MainNavigator = () => {
           options={{
             headerShown: true,
             header: () => <DetailsHeader />,
+          }}
+        />
+        <Stack.Screen
+          name="AddToCartScreen"
+          component={AddToCartScreen}
+          options={{
+            headerShown: true,
+            header: () => <CartHeader />,
           }}
         />
       </Stack.Navigator>
