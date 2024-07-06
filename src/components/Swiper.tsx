@@ -1,4 +1,10 @@
-import {Image, StyleSheet, View, ViewStyle} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
 import React from 'react';
 import SwiperFlatList, {
   SwiperFlatListProps,
@@ -6,6 +12,7 @@ import SwiperFlatList, {
 import Layout from '../constants/Layout';
 import Colors from '../constants/Colors';
 import {Text} from './Text';
+import {useNavigation} from '@react-navigation/native';
 
 const typesSwiper = {
   a: [
@@ -17,6 +24,12 @@ const typesSwiper = {
   b: [
     {
       width: Layout.window.width / 1.2,
+    },
+  ] as ViewStyle,
+  c: [
+    {
+      width: Layout.window.width,
+      height: Layout.window.width / 1.7,
     },
   ] as ViewStyle,
 };
@@ -34,6 +47,12 @@ const typesImageSwiper = {
       width: Layout.window.width / 1.3,
       height: Layout.window.width / 2.5,
       borderRadius: Layout.window.width / 20,
+    },
+  ] as ViewStyle,
+  c: [
+    {
+      width: Layout.window.width,
+      height: Layout.window.width / 2,
     },
   ] as ViewStyle,
 };
@@ -57,30 +76,40 @@ export type CardItemProps = {
 };
 
 const CardItem = (props: CardItemProps) => {
-  const {containerStyle, data, typeSwiper = 'a', ...otherCardItemProps} = props;
+  const {
+    containerStyle,
+    onPress,
+    data,
+    typeSwiper = 'a',
+    ...otherCardItemProps
+  } = props;
+
   return (
-    <View style={[containerStyle, typesSwiper[typeSwiper]]}>
+    <TouchableOpacity
+      style={[containerStyle, typesSwiper[typeSwiper]]}
+      onPress={onPress}
+    >
       <View style={typeSwiper === 'b' && styles.containerImg}>
         <Image
           source={{
-            uri: data.imgUrl,
+            uri: data?.imgUrl || data,
           }}
           defaultSource={require('../assets/images/logoApp.webp')}
           resizeMode="stretch"
           style={typesImageSwiper[typeSwiper]}
         />
-        {typeSwiper !== 'a' && (
+        {typeSwiper === 'b' && (
           <Text preset="primary" style={styles.title}>
             {data?.title && data?.title}
           </Text>
         )}
-        {typeSwiper !== 'a' && (
+        {typeSwiper === 'b' && (
           <Text preset="header" style={styles.price}>
             AED {data?.price && data?.price}
           </Text>
         )}
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -92,6 +121,12 @@ const Swiper = (props: SwiperProps) => {
     typeSwiper = 'a',
     ...otherSwiperProps
   } = props;
+  const navigation = useNavigation();
+
+  const onPressProduct = data => {
+    navigation.navigate('ProductDetails', {data});
+  };
+
   return (
     <View>
       {label && (
@@ -100,14 +135,17 @@ const Swiper = (props: SwiperProps) => {
         </Text>
       )}
       <SwiperFlatList
-        showPagination={typeSwiper === 'a'}
-        pagingEnabled={typeSwiper === 'a'}
+        showPagination={typeSwiper !== 'b'}
+        pagingEnabled={typeSwiper !== 'b'}
         data={otherSwiperProps.data}
         renderItem={({item}) => (
           <CardItem
             data={item}
             typeSwiper={typeSwiper}
             otherCardItemProps={otherSwiperProps}
+            onPress={() => {
+              onPressProduct(item);
+            }}
           />
         )}
         paginationStyleItem={{width: 30, height: 5}}

@@ -3396,6 +3396,11 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
+escape-string-regexp@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz"
+  integrity sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
+
 eslint-config-prettier@^8.5.0:
   version "8.10.0"
   resolved "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-8.10.0.tgz"
@@ -4128,7 +4133,7 @@ internal-slot@^1.0.7:
     hasown "^2.0.0"
     side-channel "^1.0.4"
 
-invariant@^2.2.4:
+invariant@^2.2.4, invariant@2.2.4:
   version "2.2.4"
   resolved "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -5991,6 +5996,14 @@ react-native-swiper-flatlist@^3.2.4:
   version "3.2.4"
   resolved "https://registry.npmjs.org/react-native-swiper-flatlist/-/react-native-swiper-flatlist-3.2.4.tgz"
   integrity sha512-rhZKjZEDqvMYAGhbf9h2POTtSjYu2YoUb2IZyFUKtsnNLA912ukvlBxXh1Y7zEq6TFX3JeolHhMx6IT97iuchQ==
+
+react-native-webview@^13.10.4:
+  version "13.10.4"
+  resolved "https://registry.npmjs.org/react-native-webview/-/react-native-webview-13.10.4.tgz"
+  integrity sha512-kRn70M7vyBS3IDaX2KqyF66ovUkrBS6LiHOgrEmRdZFO0i3hYY0wldEv1fJuKvgQIPMfo7GtGAjozFrk2vQdBw==
+  dependencies:
+    escape-string-regexp "2.0.0"
+    invariant "2.2.4"
 
 react-native@*, react-native@>=0.59.0, react-native@0.74.3:
   version "0.74.3"

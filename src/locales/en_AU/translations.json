@@ -6,7 +6,8 @@
       "skip": "Skip",
       "cancel": "Cancel",
       "save": "Save",
-      "create": "Create"
+      "create": "Create",
+      "add-to-cart": "Add to Cart"
     },
     "locations": {
       "dubai": "Dubai",
@@ -18,6 +19,9 @@
     "Home": {
       "search-cobone": "Search cobone...",
       "unmissable-offers": "Unmissable Offers"
+    },
+    "product-details": {
+      "choose-your-option": "Choose Your Option"
     }
   }
 }
