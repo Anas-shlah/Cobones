@@ -7,13 +7,15 @@
       "cancel": "Cancel",
       "save": "Save",
       "create": "Create",
-      "add-to-cart": "Add to Cart"
+      "add-to-cart": "Add to Cart",
+      "Apply": "Apply"
     },
     "locations": {
       "dubai": "Dubai",
       "abu-dhabi": "Abu Dhabi",
       "riyadh": "Riyadh"
-    }
+    },
+    "code": "code"
   },
   "screens": {
     "Home": {
@@ -22,6 +24,14 @@
     },
     "product-details": {
       "choose-your-option": "Choose Your Option"
+    },
+    "Cart": {
+      "discount-code": "Discount Code",
+      "gift-card": "Gift Card",
+      "placeholder": {
+        "enter-coupon-code": "Enter Coupon Code",
+        "gift-card-code": "Gift Card Code"
+      }
     }
   }
 }
