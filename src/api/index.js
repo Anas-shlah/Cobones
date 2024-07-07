@@ -46,18 +46,26 @@ export default {
       video: 'https://cdn.cobone.com/141791/video.mp4',
     },
     {
-      title: 'In turpis',
-      body: 'Aenean ut eros et nisl sagittis vestibulum. Donec posuere vulputate arcu. Proin faucibus arcu quis ante. Curabitur at lacus ac velit ornare lobortis. ',
+      title: 'FLASH SALE! Wild Wadi Waterpark Ticket',
+      body: 'Ut tincidunt tincidunt erat. Sed cursus turpis vitae tortor. Quisque malesuada placerat nisl. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
       imgUrl:
         'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65',
       price: 209,
+      images: ['https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65', 'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65', 'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65',],
+      options: [{ text: "1-Day General Admission for 1 person (1.1 meters and above) for Residents and Non-Residents", price: 209 }, { text: "1-Day General Admission for 1 person (1.1 meters and above) for Residents and Non-Residents", price: 209 }],
+      directions: { value: '25.1398260, 55.1896910', title: 'Wild Wadi Waterpark', nameLocation: 'Jumeirah Road, Umm Suqeim 3' },
+      video: 'https://cdn.cobone.com/141791/video.mp4',
     },
     {
-      title: 'Lorem Ipsum',
-      body: 'Phasellus ullamcorper ipsum rutrum nunc. Nullam quis ante. Etiam ultricies nisi vel augue. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc.',
+      title: 'FLASH SALE! Wild Wadi Waterpark Ticket',
+      body: 'Ut tincidunt tincidunt erat. Sed cursus turpis vitae tortor. Quisque malesuada placerat nisl. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
       imgUrl:
         'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65',
       price: 209,
+      images: ['https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65', 'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65', 'https://s3.eu-west-1.amazonaws.com/cdn.cobone.com/marketing/website/Mobile-Banner_Western-Hotels-Summer-Getaways.jpg?v=65',],
+      options: [{ text: "1-Day General Admission for 1 person (1.1 meters and above) for Residents and Non-Residents", price: 209 }, { text: "1-Day General Admission for 1 person (1.1 meters and above) for Residents and Non-Residents", price: 209 }],
+      directions: { value: '25.1398260, 55.1896910', title: 'Wild Wadi Waterpark', nameLocation: 'Jumeirah Road, Umm Suqeim 3' },
+      video: 'https://cdn.cobone.com/141791/video.mp4',
     },
   ]),
 };
