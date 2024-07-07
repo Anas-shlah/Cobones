@@ -30,6 +30,8 @@
       "gift-card": "Gift Card",
       "payment-details": "Payment Details",
       "subtotal": "Subtotal",
+      "total-price": "Total Price",
+      "proceed-to-pay": "Proceed to Pay",
       "placeholder": {
         "enter-coupon-code": "Enter Coupon Code",
         "gift-card-code": "Gift Card Code"
